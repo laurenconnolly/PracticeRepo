@@ -1,0 +1,101 @@
+---
+title: "Homework3"
+author: "Lauren Connolly"
+date: "2025-01-29"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Step 1:
+```
+FIND:\s{2, }
+REPLACE:,
+```
+The `\s` finds all single spaces, but if I were to use this alone, the program would add a comma between every space, including those in the middle of "First String" and "More Text." By adding `{2, }`, it only selects 2 or more consecutive spaces.
+
+
+## Step 2:
+```
+FIND: (\w+), (\w+), (\s*\w+.*)
+REPLACE: \2 \1 (\3)
+```
+The first two `(\w+),` finds the first two words and the comma after but captures only the word and not the comma. The last chunk finds and captures the rest of the line (the university name). The captures, labeled by order in the FIND command, are replaced in a different order to put the first name before the last, and parenthesis are added around the last capture to fit the desired layout.
+
+
+## Step 3:
+```
+FIND: (\d{4}.*?\.mp3)\s
+REPLACE: \1\n
+```
+This code captures all of the characters and spaces between the first 4 numbers of the string and the ".mp3" at the end using `.*?` in between  matching for the numbers and ".mp3". It also finds the space but doesn't capture it. The string is preserved with `\1` and the space is replaced with a line break using `\n`.
+
+
+## Step 4
+```
+FIND: (\d{4})\s(.*?)(\.mp3)
+REPLACE: \2_\1\3
+```
+The three parenthesis capture the first four letters, `(\d{4})`, the title, `(.*?)`, and the ".mp3", `(\.mp3)`, while excluding the space between the numbers and title with `\s`. The captures are reorder and "_" is added to match the format.
+
+
+## Step 5
+```
+FIND: (\w)\w+,(\w+,)\d+\.\d,
+REPLACE: \1_\2
+```
+`(\w)\w+` captures the first letter of the first word without capturing the rest of the word or the comma. `(\w+,)` captures the second word and its comma, and `\d+\.\d` **matches** the first set of numbers in the string, accounting for the decimal. The replacement puts the first letter of the first word followed by a "_" and then the second word. By matching the first numbers but not capturing them, they are eliminated in the replacement.
+
+
+## Step 6
+```
+FIND: (\w_\w{4})\w+
+REPLACE: \1
+```
+This code finds the first initial, the underscore, and second word, but it only captures the first 4 letters of the second word using `{4}`. It is replaces with only the captured part.
+
+
+## Step 7
+```
+FIND: (\w{3})\w+,(\w{3})\w+,(\d+\.\d),(\d+)
+REPLACE: \1\2, \4, \3
+```
+The code matches the whole string but only captures the first 3 letters of the two words and the 2 numbers. The captures are then rearranged in the replacement.
+
+
+## Step 8
+```
+FIND: [^a-zA-A0-9\s\/\.\_]
+REPLACE:
+```
+This first code matches all the special characters in the data except ".", "/", and "_" which are needed throughout the data.
+
+
+```
+FIND: (\n.*)\_(.*)
+REPLACE:\1\2
+```
+This code matches the lines with underscores, but excludes the first line with `\n`. It captures the text before and after the underscore, so by replacing it with just the captures (with no spaces in between), it eliminates the underscore (the replacement needed to be done twice for line 18 which had 2 underscores).
+
+
+```
+FIND:(worker|male)\s*
+REPLACE:\1\t
+```
+This code captures "worker" OR "male" in the bee_caste column using a `|`. It then matches and removes the excess spaces following the words and replaces it with a uniform tab.
+
+
+```
+FIND:(NA)(.*?)(\d{6,})
+REPLACE: 1\2\3
+```
+This finds the rows with "NA" that have a positive value in the pathogen_load column, and it replaces the "NA" with a 1.
+
+
+```
+FIND:(NA)(.*?)(4\s*0)
+REPLACE: 0\2\3
+```
+This finds the rows with "NA" that have a 0 in the pathogen_load column, and it replaces the "NA" with a 0.
