@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Lauren Connolly" />
+
+<meta name="date" content="2025-02-12" />
+
+<title>Homework5</title>
+
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">My Website</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="homework_links.html">Homework</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Homework5</h1>
+<h4 class="author">Lauren Connolly</h4>
+<h4 class="date">2025-02-12</h4>
+
+</div>
+
+
+<div id="step-1" class="section level2">
+<h2>Step 1</h2>
+<pre class="r"><code>n_dims &lt;- sample(3:10, 1, replace = TRUE)
+print(n_dims)</code></pre>
+<pre><code>## [1] 7</code></pre>
+<pre class="r"><code>vec1 &lt;- 1:n_dims^2
+print(vec1)  </code></pre>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+## [26] 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49</code></pre>
+<pre class="r"><code>vec1_shuffled &lt;- sample(vec1)
+print(vec1_shuffled)</code></pre>
+<pre><code>##  [1] 42 23  7 11 37 49 29 48 47 31 10  1 32 36 25 24 40 16 22 34  6 19 15 20 44
+## [26] 41 38 26 28 12  4 21  2 39 35 33 13 14  9 17 43 46 18 30 27  5  3  8 45</code></pre>
+<p>The variable n_dims was set to be a single random integer between 3
+and 10, and before every re-run, the number previously sampled is
+replaced. A vector was then made holding all the integers between one
+and the value of n_dims squared. The vector was then shuffled with
+<code>sample()</code> to randomly organize the integers.</p>
+<pre class="r"><code>m1 &lt;- matrix(data=vec1_shuffled, nrow=n_dims, ncol=n_dims)
+print(m1)</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7]
+## [1,]   42   48   25   19   28   33   18
+## [2,]   23   47   24   15   12   13   30
+## [3,]    7   31   40   20    4   14   27
+## [4,]   11   10   16   44   21    9    5
+## [5,]   37    1   22   41    2   17    3
+## [6,]   49   32   34   38   39   43    8
+## [7,]   29   36    6   26   35   46   45</code></pre>
+<pre class="r"><code>tm1 &lt;- t(m1)
+print(tm1)</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7]
+## [1,]   42   23    7   11   37   49   29
+## [2,]   48   47   31   10    1   32   36
+## [3,]   25   24   40   16   22   34    6
+## [4,]   19   15   20   44   41   38   26
+## [5,]   28   12    4   21    2   39   35
+## [6,]   33   13   14    9   17   43   46
+## [7,]   18   30   27    5    3    8   45</code></pre>
+<p>A matrix was then made using the values from the shuffled vector. The
+number of rows and columns were both set to be the value of n_dims so
+that the matrix will remain a square no matter what value n_dims is.
+Once the matrix was made, it was transposed using <code>t()</code>.</p>
+<pre class="r"><code>sum_tm1_r1 &lt;- sum(tm1[1,])
+mean_tm1_r1 &lt;- mean(tm1[1,])
+
+sum_tm1_r6 &lt;- sum(tm1[6,])
+mean_tm1_r6 &lt;- mean(tm1[6,])</code></pre>
+<p>The sums and means of rows 1 and 6 of the transposed matrix were
+found using the <code>sum()</code> and <code>mean()</code> function. To
+isolate the rows, a braket with the row value then a comma was put after
+the matrix name.</p>
+<pre class="r"><code>eigen_tm1 &lt;- eigen(tm1)
+typeof(eigen_tm1$values) #complex</code></pre>
+<pre><code>## [1] &quot;complex&quot;</code></pre>
+<pre class="r"><code>typeof(eigen_tm1$vectors) #complex</code></pre>
+<pre><code>## [1] &quot;complex&quot;</code></pre>
+<p>The eigen values and vectors for the transposed matrix were
+calculated using the <code>eigen()</code> function. To determine the
+type of numbers the values and vectors were, the <code>typeof()</code>
+function was used and a <code>$</code> was used to look at the values
+and vectors individually.</p>
+</div>
+<div id="step-2" class="section level2">
+<h2>Step 2</h2>
+<pre class="r"><code>my_matrix &lt;- matrix(sample(1:100, 16), nrow=4, ncol=4)
+print(my_matrix)</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]   96   47   83   19
+## [2,]   41   98   39   50
+## [3,]   36   28   18   92
+## [4,]   22   58   73   75</code></pre>
+<pre class="r"><code>set_logical &lt;- sample(1:20,100, replace = TRUE)
+my_logical &lt;- set_logical &gt; 10
+print(my_logical)</code></pre>
+<pre><code>##   [1]  TRUE FALSE FALSE FALSE FALSE  TRUE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE
+##  [13] FALSE FALSE FALSE  TRUE FALSE FALSE  TRUE FALSE FALSE  TRUE  TRUE  TRUE
+##  [25] FALSE  TRUE FALSE  TRUE FALSE  TRUE  TRUE FALSE  TRUE FALSE FALSE FALSE
+##  [37] FALSE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE FALSE  TRUE  TRUE  TRUE
+##  [49]  TRUE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE
+##  [61] FALSE  TRUE FALSE FALSE FALSE FALSE  TRUE  TRUE FALSE FALSE  TRUE  TRUE
+##  [73]  TRUE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE  TRUE FALSE FALSE  TRUE  TRUE
+##  [85]  TRUE  TRUE FALSE FALSE  TRUE FALSE  TRUE  TRUE  TRUE  TRUE FALSE FALSE
+##  [97]  TRUE FALSE FALSE  TRUE</code></pre>
+<pre class="r"><code>my_letters &lt;- sample(letters[seq(from=1, to=26)])
+print(my_letters)</code></pre>
+<pre><code>##  [1] &quot;v&quot; &quot;g&quot; &quot;d&quot; &quot;u&quot; &quot;e&quot; &quot;z&quot; &quot;o&quot; &quot;k&quot; &quot;m&quot; &quot;n&quot; &quot;p&quot; &quot;b&quot; &quot;y&quot; &quot;w&quot; &quot;f&quot; &quot;r&quot; &quot;i&quot; &quot;j&quot; &quot;q&quot;
+## [20] &quot;t&quot; &quot;x&quot; &quot;c&quot; &quot;h&quot; &quot;a&quot; &quot;s&quot; &quot;l&quot;</code></pre>
+<p>The variable <code>my_matrix</code> was assigned a matrix of 4 rows
+and 4 columns with filled with random integers between 1 and 100 using
+the <code>sample()</code> function and matrix specifications. The
+variable <code>my_logical</code> was assigned a 100-element vector TRUE
+and FALSE values. This was achieved by first making a vector
+(<code>set_logical</code>) with 100 numbers between 1 and 20;
+<code>my_logical</code> was then set evaluate whether the numbers in
+<code>set_logical</code> were greater than 10. This returned a 100 long
+vector of TRUE and FALSE. The variable <code>my_letters</code> sequenced
+the alphabet using <code>letters[]</code> (1 to 26 because there are 26
+letters) and used <code>sample()</code> to scramble that sequence.</p>
+<pre class="r"><code>typeof(my_matrix[2,2]) #double</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<pre class="r"><code>typeof(my_logical[2]) #logical</code></pre>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<pre class="r"><code>typeof(my_letters[2]) #character</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<pre class="r"><code>vec2 &lt;- c(my_matrix[2,2], my_logical[2], my_letters[2])
+typeof(vec2) #character</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<p>The types of elements were determined for an element from each of the
+vectors. A new vector was then made with those three elements using
+<code>c()</code>, and the type of objects in the vector was
+determined.</p>
+</div>
+<div id="step-3" class="section level2">
+<h2>Step 3</h2>
+<pre class="r"><code>df &lt;- data.frame(my_unis=sample(1:10, 26, replace=TRUE), my_letters=sample(LETTERS[seq(from=1, to=26)]))
+print(df)</code></pre>
+<pre><code>##    my_unis my_letters
+## 1        4          N
+## 2        5          U
+## 3        5          B
+## 4        3          L
+## 5        1          Z
+## 6        7          M
+## 7        1          E
+## 8       10          D
+## 9        1          F
+## 10       8          V
+## 11       4          A
+## 12      10          C
+## 13       7          X
+## 14       6          H
+## 15       3          J
+## 16       3          Q
+## 17       9          O
+## 18      10          G
+## 19       7          P
+## 20       3          I
+## 21       9          T
+## 22       1          W
+## 23       6          Y
+## 24      10          K
+## 25       3          R
+## 26       6          S</code></pre>
+<p>The variable df was assigned a data frame with columns my_unis and
+my_letters. The rows of each column were filled by assigning my_unis and
+my_letters to vectors of elements.</p>
+<pre class="r"><code>df$my_unis &lt;- df$my_unis[replace(df$my_unis, sample(1:26, 4), NA)]
+print(df)</code></pre>
+<pre><code>##    my_unis my_letters
+## 1        3          N
+## 2        1          U
+## 3        1          B
+## 4        5          L
+## 5       NA          Z
+## 6        1          M
+## 7        4          E
+## 8        8          D
+## 9        4          F
+## 10      10          V
+## 11       3          A
+## 12       8          C
+## 13       1          X
+## 14       7          H
+## 15       5          J
+## 16       5          Q
+## 17       1          O
+## 18       8          G
+## 19      NA          P
+## 20       5          I
+## 21      NA          T
+## 22      NA          W
+## 23       7          Y
+## 24       8          K
+## 25       5          R
+## 26       7          S</code></pre>
+<pre class="r"><code>which(is.na(df$my_unis))</code></pre>
+<pre><code>## [1]  5 19 21 22</code></pre>
+<p>The column my_unis of the data frame, df, had 4 random rows
+(randomized by <code>sample()</code>) replaced with NA. The locations of
+the NA values were then found using the <code>which(is.na())</code>
+function.</p>
+<pre class="r"><code>df &lt;- df[order(df$my_letters),]
+print(df)</code></pre>
+<pre><code>##    my_unis my_letters
+## 11       3          A
+## 3        1          B
+## 12       8          C
+## 8        8          D
+## 7        4          E
+## 9        4          F
+## 18       8          G
+## 14       7          H
+## 20       5          I
+## 15       5          J
+## 24       8          K
+## 4        5          L
+## 6        1          M
+## 1        3          N
+## 17       1          O
+## 19      NA          P
+## 16       5          Q
+## 25       5          R
+## 26       7          S
+## 21      NA          T
+## 2        1          U
+## 10      10          V
+## 22      NA          W
+## 13       1          X
+## 23       7          Y
+## 5       NA          Z</code></pre>
+<p>The column my_letters of the data fram was ordered using the
+<code>order()</code> function.</p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

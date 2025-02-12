@@ -1,0 +1,105 @@
+---
+title: "Homework5"
+author: "Lauren Connolly"
+date: "2025-02-12"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Step 1
+```{r}
+n_dims <- sample(3:10, 1, replace = TRUE)
+print(n_dims)
+
+vec1 <- 1:n_dims^2
+print(vec1)  
+
+vec1_shuffled <- sample(vec1)
+print(vec1_shuffled)
+```
+The variable n_dims was set to be a single random integer between 3 and 10, and before every re-run, the number previously sampled is replaced. A vector was then made holding all the integers between one and the value of n_dims squared. The vector was then shuffled with `sample()` to randomly organize the integers.
+
+
+```{r}
+m1 <- matrix(data=vec1_shuffled, nrow=n_dims, ncol=n_dims)
+print(m1)
+
+tm1 <- t(m1)
+print(tm1)
+```
+A matrix was then made using the values from the shuffled vector. The number of rows and columns were both set to be the value of n_dims so that the matrix will remain a square no matter what value n_dims is. Once the matrix was made, it was transposed using `t()`.
+
+
+```{r}
+sum_tm1_r1 <- sum(tm1[1,])
+mean_tm1_r1 <- mean(tm1[1,])
+
+sum_tm1_r6 <- sum(tm1[6,])
+mean_tm1_r6 <- mean(tm1[6,])
+```
+The sums and means of rows 1 and 6 of the transposed matrix were found using the `sum()` and `mean()` function. To isolate the rows, a braket with the row value then a comma was put after the matrix name.
+
+
+```{r}
+eigen_tm1 <- eigen(tm1)
+typeof(eigen_tm1$values) #complex
+typeof(eigen_tm1$vectors) #complex
+```
+The eigen values and vectors for the transposed matrix were calculated using the `eigen()` function. To determine the type of numbers the values and vectors were, the `typeof()` function was used and a `$` was used to look at the values and vectors individually.
+
+
+## Step 2
+```{r}
+my_matrix <- matrix(sample(1:100, 16), nrow=4, ncol=4)
+print(my_matrix)
+
+set_logical <- sample(1:20,100, replace = TRUE)
+my_logical <- set_logical > 10
+print(my_logical)
+
+my_letters <- sample(letters[seq(from=1, to=26)])
+print(my_letters)
+```
+The variable `my_matrix` was assigned a matrix of 4 rows and 4 columns with filled with random integers between 1 and 100 using the `sample()` function and matrix specifications. The variable `my_logical` was assigned a 100-element vector TRUE and FALSE values. This was achieved by first making a vector (`set_logical`) with 100 numbers between 1 and 20; `my_logical` was then set evaluate whether the numbers in `set_logical` were greater than 10. This returned a 100 long vector of TRUE and FALSE. The variable `my_letters` sequenced the alphabet using `letters[]` (1 to 26 because there are 26 letters) and used `sample()` to scramble that sequence. 
+
+
+```{r}
+typeof(my_matrix[2,2]) #double
+typeof(my_logical[2]) #logical
+typeof(my_letters[2]) #character
+
+vec2 <- c(my_matrix[2,2], my_logical[2], my_letters[2])
+typeof(vec2) #character
+```
+The types of elements were determined for an element from each of the vectors. A new vector was then made with those three elements using `c()`, and the type of objects in the vector was determined.
+
+
+## Step 3
+```{r}
+df <- data.frame(my_unis=sample(1:10, 26, replace=TRUE), my_letters=sample(LETTERS[seq(from=1, to=26)]))
+print(df)
+```
+The variable df was assigned a data frame with columns my_unis and my_letters. The rows of each column were filled by assigning my_unis and my_letters to vectors of elements.
+
+
+```{r}
+df$my_unis <- df$my_unis[replace(df$my_unis, sample(1:26, 4), NA)]
+print(df)
+
+which(is.na(df$my_unis))
+```
+The column my_unis of the data frame, df, had 4 random rows (randomized by `sample()`) replaced with NA. The locations of the NA values were then found using the `which(is.na())` function.
+
+
+```{r}
+df <- df[order(df$my_letters),]
+print(df)
+```
+The column my_letters of the data fram was ordered using the `order()` function.
+
+
+
+
