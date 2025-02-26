@@ -1,0 +1,95 @@
+---
+title: "Homework7"
+author: "Lauren Connolly"
+date: "2025-02-26"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Step 1
+```{r}
+library(tidyverse)
+glimpse(iris)
+```
+The `glimpse()` function shows that there are 150 rows (observations) and 5 columns (variables).
+
+
+## Step 2
+```{r}
+iris1 <- iris%>%
+  filter(Species == "virginica" | Species == "versicolor", Sepal.Length > 6, Sepal.Width > 2.5)
+glimpse(iris1) #56 observations of 5 variables
+```
+Using the filter function, `iris` was made into a new dataset called `iris1` (with `<-`) that included observations of only 2 species whose sepal measuremnts were above certain values. `glimpse()` was used to find that the dataset had 56 observations of 5 variables.
+
+
+## Step 3
+```{r}
+iris2 <- iris1%>%
+  select(Species, Sepal.Length, Sepal.Width)
+glimpse(iris2) #56 obs of 3 variables
+```
+`select()` was used to subset the three columns from `iris1` into a new dataset, `iris2`. `glimpse()` was used to find that the dataset had 56 observations of 3 variables.
+
+
+## Step 4
+```{r}
+iris3 <- iris2%>%
+  arrange(by=desc(Sepal.Length))
+head(iris3)
+```
+The observations of `iris2` were ordered by Sepal.Length using `arrange()`, and the values were specified to be in descending order with `desc()`. The order dataset was assigned to the variable `iris3`, and the first 6 rows were viewed using `head()`.
+
+
+## Step 5
+```{r}
+iris4 <- iris3%>%
+  mutate(Sepal.Area=Sepal.Length*Sepal.Width)
+glimpse(iris3) #56 obs of 4 variables
+```
+`iris4` was made using the dataset `iris3`, and a new column was added, "Sepal.Area", whose values were assigned to be the product of the length and width values. `glimpse()` was used to find that the dataset had 56 observations of 4 variables.
+
+
+## Step 6
+```{r}
+iris5 <- iris4%>%
+  summarize(meanLength=mean(Sepal.Length), meanWidth=mean(Sepal.Width), ss=n())
+print(iris5) 
+```
+A summary of `iris4` was made using `summary()`, and the mean sepal length and width along with the sample size were reported. The summary was then printed with `print()`.
+
+
+## Step 7
+```{r}
+iris6 <- iris4%>%
+  group_by(Species)%>%
+  summarize(meanLength=mean(Sepal.Length), meanWidth=mean(Sepal.Width), ss=n())
+print(iris6)
+```
+A summary of `iris4` was made again with the same values, but the values were calculated for each species rather than all together. This was achieved by grouping the data by species with `group_by()` before using `summarize()`
+
+
+## Step 8
+```{r}
+irisFinal <- iris%>%
+  filter(Species == "virginica" | Species == "versicolor", Sepal.Length > 6, Sepal.Width > 2.5)%>%
+  select(Species, Sepal.Length, Sepal.Width)%>%
+  arrange(by=desc(Sepal.Length))%>%
+  mutate(Sepal.Area=Sepal.Length*Sepal.Width)%>%
+  group_by(Species)%>%
+  summarize(meanLength=mean(Sepal.Length), meanWidth=mean(Sepal.Width), ss=n())
+print(irisFinal)
+```
+The commands above were all combined into one pipeline command, and the final data set was assigned to the variable `irisFinal` and printed.
+
+
+## Step 9
+```{r}
+iris_longer <- iris%>%
+  select(Species, Sepal.Length, Sepal.Width, Petal.Length, Petal.Width)%>%
+  pivot_longer(cols = Sepal.Length:Sepal.Width:Petal.Length:Petal.Width, names_to="Measure", values_to = "Value")
+```
+`iris` was made longer using `pivot_longer()`. The columns being used were first selected. The columns being lengthened were then specified in the function with `cols=`. The names of the columns were put into the new column "Measure", the values from the columns were put into the new column "Value", and the species column remained the same.
