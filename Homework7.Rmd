@@ -91,5 +91,6 @@ The commands above were all combined into one pipeline command, and the final da
 iris_longer <- iris%>%
   select(Species, Sepal.Length, Sepal.Width, Petal.Length, Petal.Width)%>%
   pivot_longer(cols = Sepal.Length:Sepal.Width:Petal.Length:Petal.Width, names_to="Measure", values_to = "Value")
+print(iris_longer)
 ```
 `iris` was made longer using `pivot_longer()`. The columns being used were first selected. The columns being lengthened were then specified in the function with `cols=`. The names of the columns were put into the new column "Measure", the values from the columns were put into the new column "Value", and the species column remained the same.

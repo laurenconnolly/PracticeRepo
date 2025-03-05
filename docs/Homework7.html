@@ -416,6 +416,21 @@ and printed.</p>
   pivot_longer(cols = Sepal.Length:Sepal.Width:Petal.Length:Petal.Width, names_to=&quot;Measure&quot;, values_to = &quot;Value&quot;)</code></pre>
 <pre><code>## Warning in x:y: numerical expression has 2 elements: only the first used</code></pre>
 <pre><code>## Warning in x:y: numerical expression has 3 elements: only the first used</code></pre>
+<pre class="r"><code>print(iris_longer)</code></pre>
+<pre><code>## # A tibble: 600 × 3
+##    Species Measure      Value
+##    &lt;fct&gt;   &lt;chr&gt;        &lt;dbl&gt;
+##  1 setosa  Sepal.Length   5.1
+##  2 setosa  Sepal.Width    3.5
+##  3 setosa  Petal.Length   1.4
+##  4 setosa  Petal.Width    0.2
+##  5 setosa  Sepal.Length   4.9
+##  6 setosa  Sepal.Width    3  
+##  7 setosa  Petal.Length   1.4
+##  8 setosa  Petal.Width    0.2
+##  9 setosa  Sepal.Length   4.7
+## 10 setosa  Sepal.Width    3.2
+## # ℹ 590 more rows</code></pre>
 <p><code>iris</code> was made longer using <code>pivot_longer()</code>.
 The columns being used were first selected. The columns being lengthened
 were then specified in the function with <code>cols=</code>. The names

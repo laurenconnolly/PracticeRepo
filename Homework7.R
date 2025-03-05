@@ -42,6 +42,7 @@ print(irisFinal)
 iris_longer <- iris%>%
   select(Species, Sepal.Length, Sepal.Width, Petal.Length, Petal.Width)%>%
   pivot_longer(cols = Sepal.Length:Sepal.Width:Petal.Length:Petal.Width, names_to="Measure", values_to = "Value")
+print(iris_longer)
   
-  
+# 
   

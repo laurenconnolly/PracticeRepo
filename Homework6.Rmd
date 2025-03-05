@@ -9,22 +9,63 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## Building Dataset
+```{r}
+conc1 <- rnorm(20, 1.1, 0.3)
+conc5 <- rnorm(20, 1.8, 0.5)
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+conc_df <- data.frame(concentration = rep(c("1%", "5%"), each=20), rate = c(conc1, conc5))
+print(conc_df)
 ```
+Data was created to reflect the differences in the rates of vacuole formation between **Tetrahymena** in 1% ink versus those in 5% ink. Two variables, conc1 and conc5, were assigned vectors of normally distributed values using `rnorm()`. The sample sizes were both set to be 20, but the means and standard deviations differed to reflect how the two groups differ in reality. A dataframe was made with two columns, the rate and the concentration at which the rate occurred.
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+## Initial Analysis
+```{r}
+conc_ANOVA <- aov(rate ~ concentration, data=conc_df)
+p_value <- summary(conc_ANOVA)[[1]][[1,"Pr(>F)"]]
+print (p_value)
 ```
+An ANOVA test was done on the data using `aov()`; this tested the difference in the rates bt concentration. The p-value was found in the ANOVA summary and it was printed.
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Manipulating Data
+### Sample Size
+```{r}
+ss <- c(5, 10, 20, 40, 80)
+for (i in 1:length(ss)){
+  conc1 <- rnorm(ss[i], 1.1, 0.3)
+  conc5 <- rnorm(ss[i], 1.8, 0.5)
+  conc_df <- data.frame(concentration = rep(c("1%", "5%"), each=20), rate = c(conc1, conc5))
+  conc_ANOVA <- aov(rate ~ concentration, data=conc_df)
+  p_value <- summary(conc_ANOVA)[[1]][[1,"Pr(>F)"]]
+  print(p_value)
+}
+```
+To test the effect of the sample size on the p-value, the variable `ss` was first assigned a vector of 5 different sample sizes. The for loop then made data and ran an ANOVA test for all of the listed sample sizes, and it printed each p-value in order of how the sample sizes were listed.
+
+### Mean
+```{r}
+m <- c(1, 2, 3, 4)
+for (i in 1:length(m)){
+  conc1 <- rnorm(20, 1.1+m[i], 0.3)
+  conc5 <- rnorm(20, 1.8+m[i], 0.5)
+  conc_df <- data.frame(concentration = rep(c("1%", "5%"), each=20), rate = c(conc1, conc5))
+  conc_ANOVA <- aov(rate ~ concentration, data=conc_df)
+  p_value <- summary(conc_ANOVA)[[1]][[1,"Pr(>F)"]]
+  print(p_value)
+}
+```
+To test the effect of the mean on the p-value, the variable `m` was first assigned a vector of 4 different increasing values. The for loop individually added each value to the original means for the two groups; it then made data, ran an ANOVA test for each of the new datasets, and printed each p-value in order of how the mean additions were listed in the variable `m`.
+
+### Standard Deviation
+```{r}
+sd <- c(0.1, 0.2, 0.3, 0.4)
+for (i in 1:length(m)){
+  conc1 <- rnorm(20, 1.1, 0.3+sd[i])
+  conc5 <- rnorm(20, 1.8, 0.5+sd[i])
+  conc_df <- data.frame(concentration = rep(c("1%", "5%"), each=20), rate = c(conc1, conc5))
+  conc_ANOVA <- aov(rate ~ concentration, data=conc_df)
+  p_value <- summary(conc_ANOVA)[[1]][[1,"Pr(>F)"]]
+  print(p_value)
+}
+```
+To test the effect of the standard deviation on the p-value, the variable `sd` was first assigned a vector of 4 different increasing values. The for loop individually added each value to the original standard deviations for the two groups; it then made data, ran an ANOVA test for each of the new datasets, and printed each p-value in order of how the mean additions were listed in the variable `sd`.

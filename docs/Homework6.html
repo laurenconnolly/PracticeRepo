@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Lauren Connolly" />
+
+<meta name="date" content="2025-02-26" />
+
+<title>Homework6</title>
+
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">My Website</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="homework_links.html">Homework</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Homework6</h1>
+<h4 class="author">Lauren Connolly</h4>
+<h4 class="date">2025-02-26</h4>
+
+</div>
+
+
+<div id="building-dataset" class="section level2">
+<h2>Building Dataset</h2>
+<pre class="r"><code>conc1 &lt;- rnorm(20, 1.1, 0.3)
+conc5 &lt;- rnorm(20, 1.8, 0.5)
+
+conc_df &lt;- data.frame(concentration = rep(c(&quot;1%&quot;, &quot;5%&quot;), each=20), rate = c(conc1, conc5))
+print(conc_df)</code></pre>
+<pre><code>##    concentration      rate
+## 1             1% 0.2065922
+## 2             1% 0.8847402
+## 3             1% 1.2365687
+## 4             1% 1.2464606
+## 5             1% 1.0009068
+## 6             1% 0.9156230
+## 7             1% 1.4757131
+## 8             1% 0.8147900
+## 9             1% 1.1092558
+## 10            1% 0.9937252
+## 11            1% 0.5940598
+## 12            1% 0.8155875
+## 13            1% 1.0998652
+## 14            1% 1.5698424
+## 15            1% 0.8260020
+## 16            1% 1.0070956
+## 17            1% 0.8116350
+## 18            1% 1.3233728
+## 19            1% 0.9917221
+## 20            1% 1.3565293
+## 21            5% 1.8871436
+## 22            5% 2.0625917
+## 23            5% 1.1861448
+## 24            5% 1.2144347
+## 25            5% 1.7686388
+## 26            5% 2.1600673
+## 27            5% 2.4501962
+## 28            5% 1.9599116
+## 29            5% 2.3630783
+## 30            5% 1.0538510
+## 31            5% 2.1310850
+## 32            5% 1.3864500
+## 33            5% 1.8962209
+## 34            5% 1.6012915
+## 35            5% 2.5992420
+## 36            5% 1.8872445
+## 37            5% 1.9607263
+## 38            5% 1.6425056
+## 39            5% 1.7769087
+## 40            5% 1.4680958</code></pre>
+<p>Data was created to reflect the differences in the rates of vacuole
+formation between <strong>Tetrahymena</strong> in 1% ink versus those in
+5% ink. Two variables, conc1 and conc5, were assigned vectors of
+normally distributed values using <code>rnorm()</code>. The sample sizes
+were both set to be 20, but the means and standard deviations differed
+to reflect how the two groups differ in reality. A dataframe was made
+with two columns, the rate and the concentration at which the rate
+occurred.</p>
+</div>
+<div id="initial-analysis" class="section level2">
+<h2>Initial Analysis</h2>
+<pre class="r"><code>conc_ANOVA &lt;- aov(rate ~ concentration, data=conc_df)
+p_value &lt;- summary(conc_ANOVA)[[1]][[1,&quot;Pr(&gt;F)&quot;]]
+print (p_value)</code></pre>
+<pre><code>## [1] 3.507837e-08</code></pre>
+<p>An ANOVA test was done on the data using <code>aov()</code>; this
+tested the difference in the rates bt concentration. The p-value was
+found in the ANOVA summary and it was printed.</p>
+</div>
+<div id="manipulating-data" class="section level2">
+<h2>Manipulating Data</h2>
+<div id="sample-size" class="section level3">
+<h3>Sample Size</h3>
+<pre class="r"><code>ss &lt;- c(5, 10, 20, 40, 80)
+for (i in 1:length(ss)){
+  conc1 &lt;- rnorm(ss[i], 1.1, 0.3)
+  conc5 &lt;- rnorm(ss[i], 1.8, 0.5)
+  conc_df &lt;- data.frame(concentration = rep(c(&quot;1%&quot;, &quot;5%&quot;), each=20), rate = c(conc1, conc5))
+  conc_ANOVA &lt;- aov(rate ~ concentration, data=conc_df)
+  p_value &lt;- summary(conc_ANOVA)[[1]][[1,&quot;Pr(&gt;F)&quot;]]
+  print(p_value)
+}</code></pre>
+<pre><code>## [1] 1
+## [1] 1
+## [1] 3.45634e-07
+## [1] 0.2714846
+## [1] 0.9153569</code></pre>
+<p>To test the effect of the sample size on the p-value, the variable
+<code>ss</code> was first assigned a vector of 5 different sample sizes.
+The for loop then made data and ran an ANOVA test for all of the listed
+sample sizes, and it printed each p-value in order of how the sample
+sizes were listed.</p>
+</div>
+<div id="mean" class="section level3">
+<h3>Mean</h3>
+<pre class="r"><code>m &lt;- c(1, 2, 3, 4)
+for (i in 1:length(m)){
+  conc1 &lt;- rnorm(20, 1.1+m[i], 0.3)
+  conc5 &lt;- rnorm(20, 1.8+m[i], 0.5)
+  conc_df &lt;- data.frame(concentration = rep(c(&quot;1%&quot;, &quot;5%&quot;), each=20), rate = c(conc1, conc5))
+  conc_ANOVA &lt;- aov(rate ~ concentration, data=conc_df)
+  p_value &lt;- summary(conc_ANOVA)[[1]][[1,&quot;Pr(&gt;F)&quot;]]
+  print(p_value)
+}</code></pre>
+<pre><code>## [1] 7.749754e-06
+## [1] 8.205956e-05
+## [1] 8.371917e-06
+## [1] 0.001390881</code></pre>
+<p>To test the effect of the mean on the p-value, the variable
+<code>m</code> was first assigned a vector of 4 different increasing
+values. The for loop individually added each value to the original means
+for the two groups; it then made data, ran an ANOVA test for each of the
+new datasets, and printed each p-value in order of how the mean
+additions were listed in the variable <code>m</code>.</p>
+</div>
+<div id="standard-deviation" class="section level3">
+<h3>Standard Deviation</h3>
+<pre class="r"><code>sd &lt;- c(0.1, 0.2, 0.3, 0.4)
+for (i in 1:length(m)){
+  conc1 &lt;- rnorm(20, 1.1, 0.3+sd[i])
+  conc5 &lt;- rnorm(20, 1.8, 0.5+sd[i])
+  conc_df &lt;- data.frame(concentration = rep(c(&quot;1%&quot;, &quot;5%&quot;), each=20), rate = c(conc1, conc5))
+  conc_ANOVA &lt;- aov(rate ~ concentration, data=conc_df)
+  p_value &lt;- summary(conc_ANOVA)[[1]][[1,&quot;Pr(&gt;F)&quot;]]
+  print(p_value)
+}</code></pre>
+<pre><code>## [1] 6.120779e-07
+## [1] 0.01164283
+## [1] 0.03994584
+## [1] 0.01333954</code></pre>
+<p>To test the effect of the standard deviation on the p-value, the
+variable <code>sd</code> was first assigned a vector of 4 different
+increasing values. The for loop individually added each value to the
+original standard deviations for the two groups; it then made data, ran
+an ANOVA test for each of the new datasets, and printed each p-value in
+order of how the mean additions were listed in the variable
+<code>sd</code>.</p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
