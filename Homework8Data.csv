@@ -1,0 +1,598 @@
+Month,Year,Rainfall,Source,Location
+January,1972,9.14,SERCC,Cruz Bay
+February,1972,7.14,SERCC,Cruz Bay
+March,1972,13.39,SERCC,Cruz Bay
+April,1972,9.17,SERCC,Cruz Bay
+May,1972,3.38,SERCC,Cruz Bay
+June,1972,6.73,SERCC,Cruz Bay
+July,1972,5.28,SERCC,Cruz Bay
+August,1972,8.56,SERCC,Cruz Bay
+September,1972,10.85,SERCC,Cruz Bay
+October,1972,6.88,SERCC,Cruz Bay
+November,1972,7.44,SERCC,Cruz Bay
+December,1972,11.56,SERCC,Cruz Bay
+January,1973,4.29,SERCC,Cruz Bay
+February,1973,6.48,SERCC,Cruz Bay
+March,1973,3.23,SERCC,Cruz Bay
+April,1973,6.4,SERCC,Cruz Bay
+May,1973,6.4,SERCC,Cruz Bay
+June,1973,7.32,SERCC,Cruz Bay
+July,1973,10.77,SERCC,Cruz Bay
+August,1973,8.51,SERCC,Cruz Bay
+September,1973,15.42,SERCC,Cruz Bay
+October,1973,12.9,SERCC,Cruz Bay
+November,1973,5.77,SERCC,Cruz Bay
+December,1973,5.77,SERCC,Cruz Bay
+January,1974,11.4,SERCC,Cruz Bay
+February,1974,2.46,SERCC,Cruz Bay
+March,1974,4.06,SERCC,Cruz Bay
+April,1974,9.7,SERCC,Cruz Bay
+May,1974,3.96,SERCC,Cruz Bay
+June,1974,2.21,SERCC,Cruz Bay
+July,1974,8.59,SERCC,Cruz Bay
+August,1974,17.75,SERCC,Cruz Bay
+September,1974,18.64,SERCC,Cruz Bay
+October,1974,30.45,SERCC,Cruz Bay
+November,1974,24.31,SERCC,Cruz Bay
+December,1974,6.12,SERCC,Cruz Bay
+January,1975,7.26,SERCC,Cruz Bay
+February,1975,3.48,SERCC,Cruz Bay
+March,1975,9.98,SERCC,Cruz Bay
+April,1975,4.42,SERCC,Cruz Bay
+May,1975,5.41,SERCC,Cruz Bay
+June,1975,3.33,SERCC,Cruz Bay
+July,1975,5.61,SERCC,Cruz Bay
+August,1975,5.36,SERCC,Cruz Bay
+September,1975,16.46,SERCC,Cruz Bay
+October,1975,11.56,SERCC,Cruz Bay
+November,1975,14.38,SERCC,Cruz Bay
+December,1975,19.18,SERCC,Cruz Bay
+January,1976,4.39,SERCC,Cruz Bay
+February,1976,7.67,SERCC,Cruz Bay
+March,1976,4.04,SERCC,Cruz Bay
+April,1976,7.59,SERCC,Cruz Bay
+May,1976,5.56,SERCC,Cruz Bay
+June,1976,6.65,SERCC,Cruz Bay
+July,1976,5.51,SERCC,Cruz Bay
+August,1976,11.43,SERCC,Cruz Bay
+September,1976,13.61,SERCC,Cruz Bay
+October,1976,11.94,SERCC,Cruz Bay
+November,1976,3.94,SERCC,Cruz Bay
+December,1976,11.81,SERCC,Cruz Bay
+January,1977,3.89,SERCC,Cruz Bay
+February,1977,2.41,SERCC,Cruz Bay
+March,1977,2.64,SERCC,Cruz Bay
+April,1977,6.25,SERCC,Cruz Bay
+May,1977,6.55,SERCC,Cruz Bay
+June,1977,5.38,SERCC,Cruz Bay
+July,1977,5.38,SERCC,Cruz Bay
+August,1977,8.76,SERCC,Cruz Bay
+September,1977,21.21,SERCC,Cruz Bay
+October,1977,20.96,SERCC,Cruz Bay
+November,1977,27.03,SERCC,Cruz Bay
+December,1977,9.91,SERCC,Cruz Bay
+January,1978,6.25,SERCC,Cruz Bay
+February,1978,5.21,SERCC,Cruz Bay
+March,1978,10.72,SERCC,Cruz Bay
+April,1978,13.28,SERCC,Cruz Bay
+May,1978,9.25,SERCC,Cruz Bay
+June,1978,12.98,SERCC,Cruz Bay
+July,1978,11.68,SERCC,Cruz Bay
+August,1978,15.14,SERCC,Cruz Bay
+September,1978,22.07,SERCC,Cruz Bay
+October,1978,21.26,SERCC,Cruz Bay
+November,1978,10.92,SERCC,Cruz Bay
+December,1978,6.5,SERCC,Cruz Bay
+January,1979,5.13,SERCC,Cruz Bay
+February,1979,4.8,SERCC,Cruz Bay
+March,1979,11.05,SERCC,Cruz Bay
+April,1979,8.76,SERCC,Cruz Bay
+May,1979,33.88,SERCC,Cruz Bay
+June,1979,11,SERCC,Cruz Bay
+July,1979,11.94,SERCC,Cruz Bay
+August,1979,19.91,SERCC,Cruz Bay
+September,1979,42.27,SERCC,Cruz Bay
+October,1979,7.32,SERCC,Cruz Bay
+November,1979,29.34,SERCC,Cruz Bay
+December,1979,4.22,SERCC,Cruz Bay
+January,1980,1.91,SERCC,Cruz Bay
+February,1980,4.5,SERCC,Cruz Bay
+March,1980,5.49,SERCC,Cruz Bay
+April,1980,9.27,SERCC,Cruz Bay
+May,1980,14.35,SERCC,Cruz Bay
+June,1980,3.18,SERCC,Cruz Bay
+July,1980,9.91,SERCC,Cruz Bay
+August,1980,9.78,SERCC,Cruz Bay
+September,1980,11.99,SERCC,Cruz Bay
+October,1980,19.13,SERCC,Cruz Bay
+November,1980,6.65,SERCC,Cruz Bay
+December,1980,7.24,SERCC,Cruz Bay
+January,1981,7.29,SERCC,Cruz Bay
+February,1981,4.04,SERCC,Cruz Bay
+March,1981,0.43,SERCC,Cruz Bay
+April,1981,12.01,SERCC,Cruz Bay
+May,1981,35.23,SERCC,Cruz Bay
+June,1981,10.52,SERCC,Cruz Bay
+July,1981,10.03,SERCC,Cruz Bay
+August,1981,8.2,SERCC,Cruz Bay
+September,1981,21.06,SERCC,Cruz Bay
+October,1981,12.85,SERCC,Cruz Bay
+November,1981,13.49,SERCC,Cruz Bay
+December,1981,24.69,SERCC,Cruz Bay
+January,1982,5.44,SERCC,Cruz Bay
+February,1982,12.29,SERCC,Cruz Bay
+March,1982,2.16,SERCC,Cruz Bay
+April,1982,4.8,SERCC,Cruz Bay
+May,1982,24.03,SERCC,Cruz Bay
+June,1982,6.48,SERCC,Cruz Bay
+July,1982,8.05,SERCC,Cruz Bay
+August,1982,7.26,SERCC,Cruz Bay
+September,1982,14.22,SERCC,Cruz Bay
+October,1982,11.02,SERCC,Cruz Bay
+November,1982,18.08,SERCC,Cruz Bay
+December,1982,10.34,SERCC,Cruz Bay
+January,1983,4.01,SERCC,Cruz Bay
+February,1983,1.65,SERCC,Cruz Bay
+March,1983,0.58,SERCC,Cruz Bay
+April,1983,34.49,SERCC,Cruz Bay
+May,1983,10.11,SERCC,Cruz Bay
+June,1983,5.64,SERCC,Cruz Bay
+July,1983,13,SERCC,Cruz Bay
+August,1983,19.76,SERCC,Cruz Bay
+September,1983,5.41,SERCC,Cruz Bay
+October,1983,6.12,SERCC,Cruz Bay
+November,1983,20.09,SERCC,Cruz Bay
+December,1983,9.78,SERCC,Cruz Bay
+January,1984,8.1,SERCC,Cruz Bay
+February,1984,7.8,SERCC,Cruz Bay
+March,1984,3.96,SERCC,Cruz Bay
+April,1984,3,SERCC,Cruz Bay
+May,1984,4.88,SERCC,Cruz Bay
+June,1984,11.81,SERCC,Cruz Bay
+July,1984,5.72,SERCC,Cruz Bay
+August,1984,13.18,SERCC,Cruz Bay
+September,1984,11.1,SERCC,Cruz Bay
+October,1984,8.28,SERCC,Cruz Bay
+November,1984,40.59,SERCC,Cruz Bay
+December,1984,6.63,SERCC,Cruz Bay
+January,1985,2.51,SERCC,Cruz Bay
+February,1985,6.05,SERCC,Cruz Bay
+March,1985,5.82,SERCC,Cruz Bay
+April,1985,4.75,SERCC,Cruz Bay
+May,1985,10.16,SERCC,Cruz Bay
+June,1985,0.08,SERCC,Cruz Bay
+July,1985,4.75,SERCC,Cruz Bay
+August,1985,7.32,SERCC,Cruz Bay
+September,1985,7.7,SERCC,Cruz Bay
+October,1985,32.21,SERCC,Cruz Bay
+November,1985,9.37,SERCC,Cruz Bay
+December,1985,3.94,SERCC,Cruz Bay
+January,1986,4.83,SERCC,Cruz Bay
+February,1986,2.06,SERCC,Cruz Bay
+March,1986,2.06,SERCC,Cruz Bay
+April,1986,23.52,SERCC,Cruz Bay
+May,1986,30.2,SERCC,Cruz Bay
+June,1986,4.72,SERCC,Cruz Bay
+July,1986,8.33,SERCC,Cruz Bay
+August,1986,12.01,SERCC,East End
+September,1986,2.01,SERCC,Cruz Bay
+October,1986,10.03,SERCC,Cruz Bay
+November,1986,19.69,SERCC,Cruz Bay
+December,1986,7.82,SERCC,Cruz Bay
+January,1987,2.74,SERCC,Cruz Bay
+February,1987,1.83,SERCC,Cruz Bay
+March,1987,6.27,SERCC,Cruz Bay
+April,1987,4.06,SERCC,Cruz Bay
+May,1987,21.64,SERCC,Cruz Bay
+June,1987,12.7,SERCC,Cruz Bay
+July,1987,4.04,SERCC,Cruz Bay
+August,1987,5.77,SERCC,Cruz Bay
+September,1987,6.15,SERCC,Cruz Bay
+October,1987,9.53,SERCC,Cruz Bay
+November,1987,21.69,SERCC,Cruz Bay
+December,1987,11.23,Rafe Boulon,North Shore - Windswept Beach
+January,1988,8.89,SERCC,Cruz Bay
+February,1988,7.11,SERCC,Cruz Bay
+March,1988,2.29,SERCC,Cruz Bay
+April,1988,3.99,SERCC,Cruz Bay
+May,1988,4.57,SERCC,Cruz Bay
+June,1988,7.21,SERCC,Cruz Bay
+July,1988,12.24,SERCC,Cruz Bay
+August,1988,18.97,SERCC,Cruz Bay
+September,1988,21.84,SERCC,Cruz Bay
+October,1988,14.02,SERCC,Cruz Bay
+November,1988,12.98,Rafe Boulon,North Shore - Windswept Beach
+December,1988,10.06,SERCC,Cruz Bay
+January,1989,6.81,SERCC,Cruz Bay
+February,1989,7.09,SERCC,Cruz Bay
+March,1989,7.82,SERCC,Cruz Bay
+April,1989,2.87,SERCC,East End
+May,1989,6.99,SERCC,Cruz Bay
+June,1989,4.85,SERCC,Cruz Bay
+July,1989,8.26,SERCC,Cruz Bay
+August,1989,19.99,SERCC,Cruz Bay
+September,1989,40.31,SERCC,Cruz Bay
+October,1989,3.48,SERCC,Cruz Bay
+November,1989,4.29,SERCC,Cruz Bay
+December,1989,5.08,SERCC,Cruz Bay
+January,1990,11.73,SERCC,Cruz Bay
+February,1990,7.98,SERCC,Cruz Bay
+March,1990,3.35,SERCC,Cruz Bay
+April,1990,4.42,SERCC,Cruz Bay
+May,1990,3.3,SERCC,Cruz Bay
+June,1990,6.81,SERCC,Cruz Bay
+July,1990,5.87,SERCC,Cruz Bay
+August,1990,12.45,SERCC,Cruz Bay
+September,1990,8.28,SERCC,Cruz Bay
+October,1990,27,SERCC,Cruz Bay
+November,1990,8.08,SERCC,Cruz Bay
+December,1990,7.11,SERCC,Cruz Bay
+January,1991,7.19,SERCC,Cruz Bay
+February,1991,10.08,SERCC,Cruz Bay
+March,1991,4.75,SERCC,Cruz Bay
+April,1991,6.86,SERCC,Cruz Bay
+May,1991,5.56,SERCC,Cruz Bay
+June,1991,1.5,SERCC,Cruz Bay
+July,1991,4.32,SERCC,Cruz Bay
+August,1991,6.99,SERCC,Cruz Bay
+September,1991,9.42,SERCC,Cruz Bay
+October,1991,5.64,SERCC,Cruz Bay
+November,1991,19.33,SERCC,Catherinberg
+December,1991,4.39,SERCC,Catherinberg
+January,1992,13.28,SERCC,Cruz Bay
+February,1992,3.94,SERCC,Caneel Bay
+March,1992,2.59,SERCC,Cruz Bay
+April,1992,6.07,SERCC,Catherinberg
+May,1992,17.83,SERCC,Cruz Bay
+June,1992,4.37,SERCC,Catherinberg
+July,1992,4.14,SERCC,Catherinberg
+August,1992,6.27,SERCC,Catherinberg
+September,1992,10.85,SERCC,Catherinberg
+October,1992,14.48,SERCC,Catherinberg
+November,1992,25.25,SERCC,Catherinberg
+December,1992,13.54,SERCC,Catherinberg
+January,1993,8.15,SERCC,Catherinberg
+February,1993,6.48,SERCC,Catherinberg
+March,1993,2.06,SERCC,Cruz Bay
+April,1993,8.92,SERCC,Cruz Bay
+May,1993,11.51,SERCC,Cruz Bay
+June,1993,11.18,SERCC,Cruz Bay
+July,1993,10.72,SERCC,Cruz Bay
+August,1993,2.77,SERCC,Cruz Bay
+September,1993,15.47,SERCC,Cruz Bay
+October,1993,8.05,SERCC,Cruz Bay
+November,1993,21.23,SERCC,Cruz Bay
+December,1993,5.11,SERCC,Cruz Bay
+January,1994,5.72,SERCC,Cruz Bay
+February,1994,2.62,SERCC,Cruz Bay
+March,1994,8.51,SERCC,Cruz Bay
+April,1994,11.18,SERCC,Cruz Bay
+May,1994,1.42,SERCC,Cruz Bay
+June,1994,1.17,SERCC,Cruz Bay
+July,1994,2.59,SERCC,Cruz Bay
+August,1994,3.45,SERCC,Cruz Bay
+September,1994,10.19,SERCC,Catherinberg
+October,1994,6.07,SERCC,Cruz Bay
+November,1994,8.59,SERCC,Cruz Bay
+December,1994,6.58,SERCC,Caneel Bay
+January,1995,8.05,SERCC,Caneel Bay
+February,1995,3.91,SERCC,Cruz Bay
+March,1995,2.06,SERCC,Cruz Bay
+April,1995,0.23,SERCC,Caneel Bay
+May,1995,3.1,SERCC,Cruz Bay
+June,1995,6.5,SERCC,Cruz Bay
+July,1995,12.29,SERCC,Cruz Bay
+August,1995,10.06,SERCC,Caneel Bay
+September,1995,24.89,SERCC,Catherinberg
+October,1995,11.66,SERCC,Cruz Bay
+November,1995,4.55,SERCC,Catherinberg
+December,1995,15.14,SERCC,Caneel Bay
+January,1996,16.31,SERCC,Caneel Bay
+February,1996,3.48,SERCC,Caneel Bay
+March,1996,9.58,SERCC,Catherinberg
+April,1996,8.97,SERCC,Cruz Bay
+May,1996,6.86,SERCC,Catherinberg
+June,1996,1.85,SERCC,Cruz Bay
+July,1996,13.77,SERCC,Catherinberg
+August,1996,6.93,SERCC,Cruz Bay
+September,1996,16.87,SERCC,Cruz Bay
+October,1996,2.67,SERCC,Cruz Bay
+November,1996,26.39,SERCC,East End
+December,1996,2.59,SERCC,East End
+January,1997,9.25,SERCC,East End
+February,1997,9.17,SERCC,East End
+March,1997,3.23,SERCC,East End
+April,1997,0.81,SERCC,East End
+May,1997,2.97,SERCC,Cruz Bay
+June,1997,1.85,SERCC,Cruz Bay
+July,1997,6.78,SERCC,Cruz Bay
+August,1997,14.3,SERCC,East End
+September,1997,15.82,SERCC,25-27 year average due to missing data
+October,1997,15.16,SERCC,Days incomplete but data available > than 25+ year mean
+November,1997,10.21,SERCC,Cruz Bay
+December,1997,2.92,SERCC,Cruz Bay
+January,1998,9.65,SERCC,Cruz Bay
+February,1998,2.44,SERCC,Cruz Bay
+March,1998,6.73,SERCC,Cruz Bay
+April,1998,11.84,SERCC,Cruz Bay
+May,1998,10.69,SERCC,Cruz Bay
+June,1998,4.5,SERCC,Cruz Bay
+July,1998,10.08,SERCC,Cruz Bay
+August,1998,11.53,SERCC,Days incomplete but data available > than 25+ year mean
+September,1998,16.15,SERCC,Days incomplete but data available > than 25+ year mean
+October,1998,12.55,SERCC,25-27 year average due to missing data
+November,1998,18.64,SERCC,Cruz Bay
+December,1998,8.69,SERCC,Days incomplete but data available > than 25+ year mean
+January,1999,6.81,SERCC,25-27 year average due to missing data
+February,1999,4.93,SERCC,25-27 year average due to missing data
+March,1999,5.36,SERCC,Cruz Bay
+April,1999,5.64,SERCC,Cruz Bay
+May,1999,1.91,SERCC,Cruz Bay
+June,1999,8.74,SERCC,Cruz Bay
+July,1999,11.4,SERCC,Cruz Bay
+August,1999,11.43,SERCC,Days incomplete but data available > than 25+ year mean
+September,1999,15.82,SERCC,Cruz Bay
+October,1999,14.38,SERCC,Days incomplete but data available > than 25+ year mean
+November,1999,24.23,SERCC,Days incomplete but data available > than 25+ year mean
+December,1999,13.59,SERCC,Days incomplete but data available > than 25+ year mean
+January,2000,6.81,SERCC,25-27 year average due to missing data
+February,2000,6.65,SERCC,Days incomplete but data available > than 25+ year mean
+March,2000,2.64,SERCC,Cruz Bay
+April,2000,8.99,SERCC,25-27 year average due to missing data
+May,2000,10.52,SERCC,25-27 year average due to missing data
+June,2000,4.34,SERCC,Cruz Bay
+July,2000,6.63,SERCC,Cruz Bay
+August,2000,11.05,SERCC,25-27 year average due to missing data
+September,2000,7.42,SERCC,Cruz Bay
+October,2000,12.55,SERCC,25-27 year average due to missing data
+November,2000,16.41,SERCC,25-27 year average due to missing data
+December,2000,6.2,SERCC,Cruz Bay
+January,2001,5.49,SERCC,Cruz Bay
+February,2001,4.93,SERCC,25-27 year average due to missing data
+March,2001,5,SERCC,25-27 year average due to missing data
+April,2001,11.81,SERCC,Days incomplete but data available > than 25+ year mean
+May,2001,10.52,SERCC,25-27 year average due to missing data
+June,2001,6.12,SERCC,25-27 year average due to missing data
+July,2001,8.76,SERCC,Cruz Bay
+August,2001,15.42,SERCC,Cruz Bay
+September,2001,15.82,SERCC,25-27 year average due to missing data
+October,2001,17.91,SERCC,Days incomplete but data available > than 25+ year mean
+November,2001,9.63,SERCC,Cruz Bay
+December,2001,16.59,SERCC,Days incomplete but data available > than 25+ year mean
+January,2002,6.93,SERCC,Cruz Bay
+February,2002,4.5,SERCC,Cruz Bay
+March,2002,9.07,SERCC,Cruz Bay
+April,2002,8.48,SERCC,Cruz Bay
+May,2002,2.97,SERCC,Cruz Bay
+June,2002,6.05,SERCC,East End
+July,2002,5.13,SERCC,East End
+August,2002,11.43,SERCC,Cruz Bay
+September,2002,15.42,SERCC,Cruz Bay
+October,2002,9.12,SERCC,East End
+November,2002,8.33,SERCC,Cruz Bay
+December,2002,7.09,SERCC,Cruz Bay
+January,2003,6.3,SERCC,East End
+February,2003,3.18,SERCC,East End
+March,2003,2.84,SERCC,East End
+April,2003,24.51,SERCC,East End
+May,2003,3.02,SERCC,Cruz Bay
+June,2003,3.63,SERCC,Cruz Bay
+July,2003,8.13,SERCC,Cruz Bay
+August,2003,4.83,SERCC,East End
+September,2003,15.82,SERCC,25-27 year average due to missing data
+October,2003,6.78,SERCC,Cruz Bay
+November,2003,48.03,SERCC,Cruz Bay
+December,2003,10.67,SERCC,East End
+January,2004,7.19,SERCC,Cruz Bay
+February,2004,4.75,SERCC,East End
+March,2004,11.3,SERCC,Cruz Bay
+April,2004,0.48,SERCC,Cruz Bay
+May,2004,14.55,SERCC,Cruz Bay
+June,2004,4.22,SERCC,Cruz Bay
+July,2004,8.76,SERCC,East End
+August,2004,6.86,SERCC,East End
+September,2004,30.1,SERCC,Cruz Bay
+October,2004,7.59,SERCC,Cruz Bay
+November,2004,17.04,SERCC,Cruz Bay
+December,2004,8.08,SERCC,Cruz Bay
+January,2005,12.4,SERCC,Cruz Bay
+February,2005,1.52,SERCC,Cruz Bay
+March,2005,0.36,SERCC,Cruz Bay
+April,2005,10.46,SERCC,Cruz Bay
+May,2005,10.44,SERCC,Cruz Bay
+June,2005,10.34,SERCC,Cruz Bay
+July,2005,20.17,SERCC,Days incomplete but data available > than 25+ year mean
+August,2005,6.86,SERCC,Cruz Bay
+September,2005,7.06,SERCC,Cruz Bay
+October,2005,17.78,SERCC,East End
+November,2005,6.99,SERCC,East End
+December,2005,6.91,SERCC,Cruz Bay
+January,2006,12.29,SERCC,Cruz Bay
+February,2006,1.3,SERCC,Cruz Bay
+March,2006,2.74,SERCC,Cruz Bay
+April,2006,8.08,SERCC,Cruz Bay
+May,2006,7.47,SERCC,Cruz Bay
+June,2006,10.54,SERCC,Cruz Bay
+July,2006,14.15,SERCC,Cruz Bay
+August,2006,14.68,SERCC,Cruz Bay
+September,2006,8.64,SERCC,Cruz Bay
+October,2006,21.39,SERCC,Cruz Bay
+November,2006,5.41,SERCC,Cruz Bay
+December,2006,7.57,SERCC,Cruz Bay
+January,2007,1.78,SERCC,Cruz Bay
+February,2007,2.18,SERCC,Cruz Bay
+March,2007,5.54,SERCC,Cruz Bay
+April,2007,25.15,SERCC,Cruz Bay
+May,2007,8.53,SERCC,Cruz Bay
+June,2007,8.28,SERCC,Cruz Bay
+July,2007,5.59,SERCC,Cruz Bay
+August,2007,12.47,SERCC,Cruz Bay
+September,2007,12.55,SERCC,Cruz Bay
+October,2007,28.98,SERCC,Cruz Bay
+November,2007,6.83,SERCC,Cruz Bay
+December,2007,12.83,SERCC,Cruz Bay
+January,2008,13.97,SERCC,Cruz Bay
+February,2008,3.96,SERCC,Cruz Bay
+March,2008,3.94,SERCC,Cruz Bay
+April,2008,10.39,SERCC,Cruz Bay
+May,2008,2.59,SERCC,Cruz Bay
+June,2008,3.81,SERCC,Cruz Bay
+July,2008,5.74,SERCC,Cruz Bay
+August,2008,28.55,SERCC,Cruz Bay
+September,2008,25.78,SERCC,Cruz Bay
+October,2008,29.62,SERCC,Cruz Bay
+November,2008,8.71,SERCC,Cruz Bay
+December,2008,3.91,SERCC,Cruz Bay
+January,2009,5.51,SERCC,Cruz Bay
+February,2009,3.02,SERCC,Cruz Bay
+March,2009,5.41,SERCC,Cruz Bay
+April,2009,1.6,SERCC,Cruz Bay
+May,2009,31.52,SERCC,Cruz Bay
+June,2009,14.45,SERCC,Cruz Bay
+July,2009,6.35,SERCC,Cruz Bay
+August,2009,6.2,SERCC,Cruz Bay
+September,2009,7.47,SERCC,Cruz Bay
+October,2009,4.7,SERCC,Cruz Bay
+November,2009,10.95,SERCC,Cruz Bay
+December,2009,10.24,SERCC,Cruz Bay
+January,2010,6.43,SERCC,Cruz Bay
+February,2010,1.93,SERCC,Cruz Bay
+March,2010,5.11,SERCC,Cruz Bay
+April,2010,4.78,SERCC,Cruz Bay
+May,2010,21.21,SERCC,Cruz Bay
+June,2010,20.83,SERCC,Cruz Bay
+July,2010,30.02,SERCC,Cruz Bay
+August,2010,17.12,SERCC,Cruz Bay
+September,2010,8.71,SERCC,Cruz Bay
+October,2010,44.75,SERCC,Cruz Bay
+November,2010,22.81,SERCC,Cruz Bay
+December,2010,2.31,SERCC,Cruz Bay
+January,2011,1.85,SERCC,Cruz Bay
+February,2011,6.2,SERCC,Cruz Bay
+March,2011,2.01,SERCC,Cruz Bay
+April,2011,5.21,SERCC,Cruz Bay
+May,2011,21.87,SERCC,Cruz Bay
+June,2011,9.91,SERCC,Cruz Bay
+July,2011,18.47,SERCC,Cruz Bay
+August,2011,29.9,SERCC,Cruz Bay
+September,2011,17.12,SERCC,Cruz Bay
+October,2011,4.19,SERCC,Cruz Bay
+November,2011,14.17,SERCC,Cruz Bay
+December,2011,9.53,SERCC,Cruz Bay
+January,2012,7.52,Rafe Boulon,North Shore - Windswept Beach
+February,2012,3.91,Rafe Boulon,North Shore - Windswept Beach
+March,2012,4.6,Rafe Boulon,North Shore - Windswept Beach
+April,2012,4.42,Rafe Boulon,North Shore - Windswept Beach
+May,2012,10.31,Rafe Boulon,North Shore - Windswept Beach
+June,2012,0.53,Rafe Boulon,North Shore - Windswept Beach
+July,2012,11.56,Rafe Boulon,North Shore - Windswept Beach
+August,2012,14.15,Rafe Boulon,North Shore - Windswept Beach
+September,2012,6.63,Rafe Boulon,North Shore - Windswept Beach
+October,2012,8.23,Rafe Boulon,North Shore - Windswept Beach
+November,2012,13.77,Rafe Boulon,North Shore - Windswept Beach
+December,2012,5.33,Rafe Boulon,North Shore - Windswept Beach
+January,2013,5.51,Rafe Boulon,North Shore - Windswept Beach
+February,2013,4.57,Rafe Boulon,North Shore - Windswept Beach
+March,2013,4.72,Rafe Boulon,North Shore - Windswept Beach
+April,2013,3.1,Rafe Boulon,North Shore - Windswept Beach
+May,2013,19.25,Rafe Boulon,North Shore - Windswept Beach
+June,2013,10.46,Rafe Boulon,North Shore - Windswept Beach
+July,2013,7.77,Rafe Boulon,North Shore - Windswept Beach
+August,2013,10.57,Rafe Boulon,North Shore - Windswept Beach
+September,2013,20.07,Rafe Boulon,North Shore - Windswept Beach
+October,2013,11.63,Rafe Boulon,North Shore - Windswept Beach
+November,2013,26.52,Rafe Boulon,North Shore - Windswept Beach
+December,2013,17.53,Rafe Boulon,North Shore - Windswept Beach
+January,2014,5.94,Rafe Boulon,North Shore - Windswept Beach
+February,2014,6.48,Rafe Boulon,North Shore - Windswept Beach
+March,2014,3.81,Rafe Boulon,North Shore - Windswept Beach
+April,2014,5.18,Rafe Boulon,North Shore - Windswept Beach
+May,2014,29.03,Rafe Boulon,North Shore - Windswept Beach
+June,2014,2.46,Rafe Boulon,North Shore - Windswept Beach
+July,2014,5.66,Rafe Boulon,North Shore - Windswept Beach
+August,2014,26.9,Rafe Boulon,North Shore - Windswept Beach
+September,2014,8.66,Rafe Boulon,North Shore - Windswept Beach
+October,2014,9.19,Rafe Boulon,North Shore - Windswept Beach
+November,2014,19.69,Rafe Boulon,North Shore - Windswept Beach
+December,2014,4.45,Rafe Boulon,North Shore - Windswept Beach
+January,2015,6.58,Rafe Boulon,North Shore - Windswept Beach
+February,2015,13.03,Rafe Boulon,North Shore - Windswept Beach
+March,2015,3.38,Rafe Boulon,North Shore - Windswept Beach
+April,2015,1.4,Rafe Boulon,North Shore - Windswept Beach
+May,2015,0.36,Rafe Boulon,North Shore - Windswept Beach
+June,2015,2.41,Rafe Boulon,North Shore - Windswept Beach
+July,2015,1.75,Rafe Boulon,North Shore - Windswept Beach
+August,2015,7.75,Rafe Boulon,North Shore - Windswept Beach
+September,2015,8.81,Rafe Boulon,North Shore - Windswept Beach
+October,2015,14.91,Rafe Boulon,North Shore - Windswept Beach
+November,2015,24.21,Rafe Boulon,North Shore - Windswept Beach
+December,2015,12.27,Rafe Boulon,North Shore - Windswept Beach
+January,2016,4.27,Rafe Boulon,North Shore - Windswept Beach
+February,2016,3.78,Rafe Boulon,North Shore - Windswept Beach
+March,2016,7.49,Rafe Boulon,North Shore - Windswept Beach
+April,2016,7.75,Rafe Boulon,North Shore - Windswept Beach
+May,2016,7.26,Rafe Boulon,North Shore - Windswept Beach
+June,2016,1.68,Rafe Boulon,North Shore - Windswept Beach
+July,2016,7.24,Rafe Boulon,North Shore - Windswept Beach
+August,2016,7.32,Rafe Boulon,North Shore - Windswept Beach
+September,2016,12.62,Rafe Boulon,North Shore - Windswept Beach
+October,2016,11.96,Rafe Boulon,North Shore - Windswept Beach
+November,2016,35.26,Rafe Boulon,North Shore - Windswept Beach
+December,2016,10.69,Rafe Boulon,North Shore - Windswept Beach
+January,2017,4.47,Rafe Boulon,North Shore - Windswept Beach
+February,2017,9.04,Rafe Boulon,North Shore - Windswept Beach
+March,2017,5.89,Rafe Boulon,North Shore - Windswept Beach
+April,2017,4.14,Rafe Boulon,North Shore - Windswept Beach
+May,2017,13.82,Rafe Boulon,North Shore - Windswept Beach
+June,2017,9.83,Rafe Boulon,North Shore - Windswept Beach
+July,2017,15.29,Rafe Boulon,North Shore - Windswept Beach
+August,2017,18.92,Rafe Boulon,North Shore - Windswept Beach
+September,2017,54.46,Rafe Boulon,North Shore - Windswept Beach
+October,2017,34.62,Rafe Boulon,North Shore - Windswept Beach
+November,2017,17.91,Rafe Boulon,North Shore - Windswept Beach
+December,2017,5.69,Rafe Boulon,North Shore - Windswept Beach
+January,2018,8.33,Rafe Boulon,North Shore - Windswept Beach
+February,2018,6.07,Rafe Boulon,North Shore - Windswept Beach
+March,2018,1.98,Rafe Boulon,North Shore - Windswept Beach
+April,2018,5,Rafe Boulon,North Shore - Windswept Beach
+May,2018,4.78,Rafe Boulon,North Shore - Windswept Beach
+June,2018,10.41,Rafe Boulon,North Shore - Windswept Beach
+July,2018,5.64,Rafe Boulon,North Shore - Windswept Beach
+August,2018,18.06,Rafe Boulon,North Shore - Windswept Beach
+September,2018,3.96,Rafe Boulon,North Shore - Windswept Beach
+October,2018,13.64,Rafe Boulon,North Shore - Windswept Beach
+November,2018,34.7,Rafe Boulon,North Shore - Windswept Beach
+December,2018,4.55,Rafe Boulon,North Shore - Windswept Beach
+January,2019,3.71,Rafe Boulon,North Shore - Windswept Beach
+February,2019,2.46,Rafe Boulon,North Shore - Windswept Beach
+March,2019,1.22,Rafe Boulon,North Shore - Windswept Beach
+April,2019,2.01,Rafe Boulon,North Shore - Windswept Beach
+May,2019,9.22,Rafe Boulon,North Shore - Windswept Beach
+June,2019,11.56,Rafe Boulon,North Shore - Windswept Beach
+July,2019,9.19,Rafe Boulon,North Shore - Windswept Beach
+August,2019,21.67,Rafe Boulon,North Shore - Windswept Beach
+September,2019,10.13,Rafe Boulon,North Shore - Windswept Beach
+October,2019,10.16,Rafe Boulon,North Shore - Windswept Beach
+November,2019,4.93,Rafe Boulon,North Shore - Windswept Beach
+December,2019,16.56,Rafe Boulon,North Shore - Windswept Beach
+January,2020,13.72,Rafe Boulon,North Shore - Windswept Beach
+February,2020,6.43,Rafe Boulon,North Shore - Windswept Beach
+March,2020,6.02,Rafe Boulon,North Shore - Windswept Beach
+April,2020,1.96,Rafe Boulon,North Shore - Windswept Beach
+May,2020,5.18,Rafe Boulon,North Shore - Windswept Beach
+June,2020,3.15,Rafe Boulon,North Shore - Windswept Beach
+July,2020,9.45,Rafe Boulon,North Shore - Windswept Beach
+August,2020,10.44,Rafe Boulon,North Shore - Windswept Beach
+September,2020,9.14,Rafe Boulon,North Shore - Windswept Beach
+October,2020,20.22,Rafe Boulon,North Shore - Windswept Beach
+November,2020,18.75,Rafe Boulon,North Shore - Windswept Beach
+December,2020,9.02,Rafe Boulon,North Shore - Windswept Beach
+January,2021,2.82,Rafe Boulon,North Shore - Windswept Beach
+February,2021,3.61,Rafe Boulon,North Shore - Windswept Beach
+March,2021,2.64,Rafe Boulon,North Shore - Windswept Beach
+April,2021,5.92,Rafe Boulon,North Shore - Windswept Beach
+May,2021,5.08,Rafe Boulon,North Shore - Windswept Beach
+June,2021,10.06,Rafe Boulon,North Shore - Windswept Beach
+July,2021,9.63,Rafe Boulon,North Shore - Windswept Beach
+August,2021,9.91,Rafe Boulon,North Shore - Windswept Beach
+September,2021,11.91,Rafe Boulon,North Shore - Windswept Beach
