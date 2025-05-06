@@ -11,9 +11,9 @@
 
 <meta name="author" content="Lauren Connolly" />
 
-<meta name="date" content="2025-01-22" />
+<meta name="date" content="2025-05-06" />
 
-<title>Homework Links</title>
+<title>Homework10</title>
 
 <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -265,22 +265,170 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Homework Links</h1>
+<h1 class="title toc-ignore">Homework10</h1>
 <h4 class="author">Lauren Connolly</h4>
-<h4 class="date">2025-01-22</h4>
+<h4 class="date">2025-05-06</h4>
 
 </div>
 
 
-<p>Week 1 Homework <a href="HW1.html">HW1 Link</a></p>
-<p>Week 3 Homework <a href="Homework3.html">HW3 Link</a></p>
-<p>Week 4 Homework <a href="Homework4.html">HW4 Link</a></p>
-<p>Week 5 Homework <a href="Homework5.html">HW5 Link</a></p>
-<p>Week 6 Homework <a href="Homework6.html">HW6 Link</a></p>
-<p>Week 7 Homework <a href="Homework7.html">HW7 Link</a></p>
-<p>Week 8 Homework <a href="Homework8.html">HW8 Link</a></p>
-<p>Week 9 Homework <a href="Homework9.zip">HW9 Link</a></p>
-<p>Week 10 Homework <a href="Homework10.html">HW10 Link</a></p>
+<div id="libraries-data" class="section level1">
+<h1>Libraries + Data</h1>
+<pre class="r"><code>library(beeswarm)
+library(ggplot2)
+library(ggridges)
+library(ggbeeswarm)
+library(ggrepel)
+library(dplyr)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<pre class="r"><code>library(patchwork)
+
+data &lt;- read.csv(&quot;honeyproduction.csv&quot;)
+
+dataP1 &lt;- data%&gt;%
+  filter(year == &quot;2010&quot; | year == &quot;2011&quot; | year == &quot;2012&quot;)
+
+dataP2 &lt;- data%&gt;%
+  select(year, yieldpercol, state) %&gt;%
+  mutate(Cyear = as.character(year)) %&gt;%
+  filter(Cyear == &quot;2008&quot; | Cyear == &quot;2009&quot; | Cyear == &quot;2010&quot; | Cyear == &quot;2011&quot; | year == &quot;2012&quot;) %&gt;%
+  group_by(Cyear)
+
+dataP4 &lt;- data%&gt;%
+  group_by(state) %&gt;%
+  summarize(meanprod = mean(totalprod)) %&gt;%
+  filter(state == &quot;ND&quot; | state == &quot;SD&quot; | state == &quot;NE&quot; | state == &quot;KS&quot; | state == &quot;OK&quot;) %&gt;% 
+  arrange(desc(state)) %&gt;%
+  mutate(
+    fraction = meanprod / sum(meanprod),
+    ymax = cumsum(fraction),
+    ymin = lag(ymax, default = 0),
+    label_pos = (ymax + ymin) / 2,
+    label = paste0(round(meanprod, 1))  
+  )</code></pre>
+</div>
+<div id="plots" class="section level1">
+<h1>Plots</h1>
+<div id="plot-1" class="section level2">
+<h2>Plot 1</h2>
+<pre class="r"><code>p1 &lt;- ggplot(dataP1, aes(x = factor(year), y = priceperlb, color = factor(year))) +
+  geom_quasirandom(width = 0.2) +
+  scale_color_manual(values = c(&quot;orange&quot;, &quot;lightblue&quot;, &quot;magenta&quot;)) +
+  labs(title = &quot;Price Per Pound by State, 2010-2012&quot;, 
+       x = &quot;Year&quot;, 
+       y = &quot;Price Per Pound by State&quot;, 
+       color = &quot;Year&quot;) +
+  theme(
+    plot.title = element_text(family = &quot;helvetica&quot;, face = &quot;bold&quot;, size = 12),
+    axis.title = element_text(family = &quot;helvetica&quot;, size = 8),
+    legend.title = element_text(size = 8), 
+    legend.text = element_text(size = 8), 
+    plot.background = element_rect(fill = &quot;aliceblue&quot;, color = NA), 
+    panel.background = element_rect(fill = &quot;lavenderblush&quot;),
+    legend.background = element_rect(fill = &quot;aliceblue&quot;))
+p1</code></pre>
+<p><img src="Homework10_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+</div>
+<div id="plot-2" class="section level2">
+<h2>Plot 2</h2>
+<pre class="r"><code>p2 &lt;- ggplot(dataP2) +
+  aes(x=yieldpercol, y=Cyear, fill=Cyear) +
+  geom_density_ridges(
+    aes(point_color = Cyear, 
+        point_fill = Cyear, 
+        point_shape = Cyear),
+    alpha = .2, 
+    point_alpha = 1, 
+    jittered_points = TRUE) +
+  scale_point_color_hue(l = 40) +
+  scale_discrete_manual(aesthetics = &quot;point_shape&quot;, 
+                        values = c(21, 22, 23, 24, 25)) +
+  labs(title = &quot;Yield Per Colony Distribution by Year&quot;, 
+       x = &quot;Yield Per Colony&quot;, 
+       y = &quot;Year&quot;, 
+       point_shape = &quot;Year&quot;, 
+       point_color = &quot;Year&quot;, 
+       point_fill = &quot;Year&quot;, 
+       fill = &quot;Year&quot;) +
+  theme(
+    plot.title = element_text(family = &quot;helvetica&quot;, face = &quot;bold&quot;, size = 12),
+    axis.title = element_text(family = &quot;helvetica&quot;, size = 8),
+    legend.title = element_text(size = 8), 
+    legend.text = element_text(size = 8), 
+    plot.background = element_rect(fill = &quot;aliceblue&quot;, color = NA), 
+    panel.background = element_rect(fill = &quot;lavenderblush&quot;),
+    legend.background = element_rect(fill = &quot;aliceblue&quot;)
+  )
+p2</code></pre>
+<pre><code>## Warning: The `scale_name` argument of `discrete_scale()` is deprecated as of ggplot2
+## 3.5.0.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.</code></pre>
+<pre><code>## Picking joint bandwidth of 6.44</code></pre>
+<p><img src="Homework10_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="plot-3" class="section level2">
+<h2>Plot 3</h2>
+<pre class="r"><code>p3 &lt;- ggplot(data) +
+  aes(x=yieldpercol, y=priceperlb) +
+  geom_bin2d(binwidth = c(3,0.10)) +
+  scale_fill_gradientn(colors = c(&quot;pink&quot;, &quot;magenta&quot;)) +
+  labs(title = &quot;Price Per Pound Based on Colony Yield&quot;, 
+       x = &quot;Yield per Colony&quot;, 
+       y = &quot;Price Per Pound&quot;) +
+  theme(plot.title = element_text(family = &quot;helvetica&quot;, face = &quot;bold&quot;, size = 12),
+        axis.title = element_text(family = &quot;helvetica&quot;, size = 8),
+        legend.title = element_text(size = 8), 
+        legend.text = element_text(size = 8), 
+        plot.background = element_rect(fill = &quot;aliceblue&quot;, color = NA), 
+        panel.background = element_rect(fill = &quot;lavenderblush&quot;),
+        legend.background = element_rect(fill = &quot;aliceblue&quot;))
+p3</code></pre>
+<p><img src="Homework10_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>
+<div id="plot-4" class="section level2">
+<h2>Plot 4</h2>
+<pre class="r"><code>p4 &lt;- ggplot(dataP4) +
+  aes(x=&quot;&quot;, y=meanprod, fill=state) +
+  geom_bar(stat=&quot;identity&quot;, width = 1, color = &quot;white&quot;) +
+  coord_polar(&quot;y&quot;, start=0) +
+  geom_label_repel(
+    aes(y = label_pos * sum(meanprod), label = label),
+    x = 1.4,
+    nudge_x = 0.5,
+    show.legend = FALSE,
+    size = 4,
+    segment.color = &quot;gray50&quot;
+  ) +
+  scale_fill_brewer(palette = &quot;Pastel1&quot;) +
+  labs(title = &quot;Mean Total Product of Great Plains States&quot;,
+       fill = &quot;State&quot;) +
+  theme_void() +
+  theme(plot.title = element_text(family = &quot;helvetica&quot;, face = &quot;bold&quot;, size = 12),
+        legend.title = element_text(size = 8), 
+        legend.text = element_text(size = 8), 
+        plot.background = element_rect(fill = &quot;aliceblue&quot;, color = NA), 
+        panel.background = element_rect(fill = &quot;lavenderblush&quot;),
+        legend.background = element_rect(fill = &quot;aliceblue&quot;))
+p4</code></pre>
+<p><img src="Homework10_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>
+</div>
+<div id="cumulative-plot" class="section level1">
+<h1>Cumulative Plot</h1>
+<pre class="r"><code>p1 + p2 + p4 + p3 + plot_layout(ncol=2, widths = 1, heights = 1)</code></pre>
+<pre><code>## Picking joint bandwidth of 6.44</code></pre>
+<p><img src="Homework10_files/figure-html/unnamed-chunk-6-1.png" width="672" />
+PNG: <a href="CombinedPlots.png">Cumulative Plot</a></p>
+</div>
 
 
 
